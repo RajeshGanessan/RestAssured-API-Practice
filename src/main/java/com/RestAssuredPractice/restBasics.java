@@ -28,7 +28,7 @@ public class restBasics {
 
 
          //Update Place API
-       String UpdateReponse =  given().queryParam("key","qaclick123").header("Content-Type","application/json")
+       String UpdateResponse =  given().queryParam("key","qaclick123").header("Content-Type","application/json")
                 .body("{\n" +
                         "\"place_id\":\""+ place_id+"\",\n" +
                         "\"address\":\"15th cross richmond road, Bangalore\",\n" +
@@ -37,14 +37,13 @@ public class restBasics {
                         " \n")
                 .when().put("/maps/api/place/update/json")
                 .then().assertThat().statusCode(200).extract().response().asString();
-            JsonPath jsonUpdate = new JsonPath(UpdateReponse);
+            JsonPath jsonUpdate = new JsonPath(UpdateResponse);
             String UpdateSucess = jsonUpdate.get("msg");
         System.out.println(UpdateSucess);
 
 
         //Get the Updated Place
        String getPlace =  given().queryParam("key","qaclick123").queryParam("place_id",place_id)
-                .header("Content-Type","application/json")
                 .when().get("/maps/api/place/get/json")
                 .then().assertThat().statusCode(200).extract().response().asString();
         System.out.println("Get Place = " + getPlace);
