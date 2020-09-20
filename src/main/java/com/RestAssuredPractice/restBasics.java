@@ -28,7 +28,7 @@ public class restBasics {
 
 
          //Update Place API
-       String UpdateResponse =  given().queryParam("key","qaclick123").header("Content-Type","application/json")
+       String UpdateResponse =  given().queryParam("key","qaclick123").header("Content-Type","w")
                 .body("{\n" +
                         "\"place_id\":\""+ place_id+"\",\n" +
                         "\"address\":\"15th cross richmond road, Bangalore\",\n" +

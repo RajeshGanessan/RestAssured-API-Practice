@@ -58,4 +58,16 @@ public class PayloadJson {
                 "\t]\n" +
                 "}";
     }
+
+    //AddBook Json Payload
+    public static String getAddBook(String isbn,String aisle){
+
+        return "{\n" +
+                "\n" +
+                "\"name\":\"Learn Rest Assured API Automation\",\n" +
+                "\"isbn\":\""+isbn+"\",\n" +
+                "\"aisle\":\""+aisle+"\",\n" +
+                "\"author\":\"Rajesh\"\n" +
+                "}";
+    }
 }

@@ -1,2 +1,5 @@
-com/RestAssuredPractice/App.class
-com/RestAssuredPractice/RestBasics.class
+com/RestAssuredPractice/Data/BrowserStackSampleTest.class
+com/RestAssuredPractice/restBasics.class
+com/RestAssuredPractice/NestedJsonhandle.class
+com/RestAssuredPractice/Data/PayloadJson.class
+com/RestAssuredPractice/LibraryAPI/DynamicJson.class
