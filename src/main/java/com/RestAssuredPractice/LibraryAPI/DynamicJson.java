@@ -38,7 +38,12 @@ public class DynamicJson {
         System.out.println(bookID);
 
     }
-
+//
+//    @Test(priority = 2,description = "deleting the AddedBooks")
+//    public void deleteBook(){
+//        String deleteBookResponse = given().header("Content-Type","application/json")
+//                .body()
+//    }
     @DataProvider(name = "BookData")
     public Object[][] getBookData(){
         return new Object[][] {{"Ram kishore","345"},{"sabari","456"},{"prithvi","980"}};
