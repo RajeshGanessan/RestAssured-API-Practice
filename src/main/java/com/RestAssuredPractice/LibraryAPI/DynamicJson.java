@@ -11,6 +11,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import javax.xml.crypto.Data;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 
 import static io.restassured.RestAssured.*;
@@ -44,6 +47,12 @@ public class DynamicJson {
 //        String deleteBookResponse = given().header("Content-Type","application/json")
 //                .body()
 //    }
+
+    public static String GenerateStringFromResource(String path) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(path)));
+
+    }
+
     @DataProvider(name = "BookData")
     public Object[][] getBookData(){
         return new Object[][] {{"Ram kishore","345"},{"sabari","456"},{"prithvi","980"}};
