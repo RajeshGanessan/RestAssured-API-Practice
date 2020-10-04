@@ -59,6 +59,8 @@ public class addAttachement {
            String commentID =  jsonPath.get("fields.comment.comments["+ i +"].id");
             if(commentID.equals(commentid)){
                 System.out.println("Comment ID ====> " +commentID);
+               String body =  jsonPath.get("fields.comment.comments["+i+"].body");
+                System.out.println(body);
             }
         }
     }
