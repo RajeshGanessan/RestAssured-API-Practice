@@ -56,8 +56,10 @@ public class addAttachement {
        int commentSize =  jsonPath.getInt("fields.comment.comments.size()");
         for(int i=0;i<commentSize;i++){
 
-           int commentID =  jsonPath.getInt("fields.comment.comments["+ i +"].id");
-            System.out.println(commentID);
+           String commentID =  jsonPath.get("fields.comment.comments["+ i +"].id");
+            if(commentID.equals(commentid)){
+                System.out.println("Comment ID ====> " +commentID);
+            }
         }
     }
 
